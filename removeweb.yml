@@ -1,0 +1,9 @@
+- hosts: c3p0
+  tasks:
+  - name: stop Apache
+    service: name=httpd state=stopped
+  - name: remove Latest version of Apache
+    yum: pkg=httpd state=absent
+  - name: Remove index.html
+    file: path=/var/www/html/index.html state=absent 
+

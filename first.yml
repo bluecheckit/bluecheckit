@@ -1,0 +1,3 @@
+- hosts: c3p0
+  tasks:
+    - action: ping
